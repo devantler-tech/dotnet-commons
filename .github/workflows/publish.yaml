@@ -1,9 +1,12 @@
 name: Publish
 on:
+  workflow_dispatch:
   push:
     tags:
       - 'v*'
-  workflow_dispatch:
+
+permissions:
+  packages: write
 
 jobs:
   publish:
