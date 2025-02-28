@@ -31,7 +31,7 @@
     │       └── GrammarStringExtensionsTests
     └── Devantler.Commons.Utils.Tests
 
-23 directories
+21 directories
 ```
 <!-- readme-tree end -->
 
