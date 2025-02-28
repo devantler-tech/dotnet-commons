@@ -15,6 +15,9 @@ public static class ListExtensions
   public static void AddIfNotNull(this List<string> arguments, string format, params object?[] values)
   {
     ArgumentNullException.ThrowIfNull(arguments, nameof(arguments));
-    arguments.Add(string.Format(CultureInfo.InvariantCulture, format, values));
+    if (values.All(value => value != null))
+    {
+      arguments.Add(string.Format(CultureInfo.InvariantCulture, format, values));
+    }
   }
 }
