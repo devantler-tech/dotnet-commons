@@ -7,7 +7,7 @@ namespace Devantler.Commons.Extensions.Tests.Setup.AutoDataAttributes;
 /// <summary>
 /// An auto data attribute that generates negative integers.
 /// </summary>
-public class NegativeIntegerAutoDataAttribute : AutoDataAttribute
+sealed class NegativeIntegerAutoDataAttribute : AutoDataAttribute
 {
   /// <summary>
   /// Creates a new instance of the <see cref="NegativeIntegerAutoDataAttribute"/> class.

@@ -1,4 +1,5 @@
 namespace Devantler.Commons.Extensions;
+using System.Globalization;
 
 /// <summary>
 /// Extensions for List.
@@ -13,9 +14,7 @@ public static class ListExtensions
   /// <param name="values"></param>
   public static void AddIfNotNull(this List<string> arguments, string format, params object?[] values)
   {
-    if (values.All(value => value != null))
-    {
-      arguments.Add(string.Format(format, values));
-    }
+    ArgumentNullException.ThrowIfNull(arguments, nameof(arguments));
+    arguments.Add(string.Format(CultureInfo.InvariantCulture, format, values));
   }
 }

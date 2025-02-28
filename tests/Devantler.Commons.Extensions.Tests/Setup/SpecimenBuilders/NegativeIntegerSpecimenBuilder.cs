@@ -6,7 +6,7 @@ namespace Devantler.Commons.Extensions.Tests.Setup.SpecimenBuilders;
 /// <summary>
 /// A specimen builder for negative integers.
 /// </summary>
-public class NegativeIntegerSpecimenBuilder : ISpecimenBuilder
+sealed class NegativeIntegerSpecimenBuilder : ISpecimenBuilder
 {
   /// <inheritdoc/>
   public object Create(object request, ISpecimenContext context) =>

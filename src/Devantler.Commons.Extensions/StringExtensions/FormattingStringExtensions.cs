@@ -15,6 +15,7 @@ public static class FormattingStringExtensions
   /// <param name="ignoreFirstLine"></param>
   public static string Indent(this string text, int spaces = 4, bool ignoreFirstLine = false)
   {
+    ArgumentNullException.ThrowIfNullOrEmpty(text, nameof(text));
     StringBuilder builder = new();
     string[] lines = text.Split(Environment.NewLine.ToCharArray());
     for (int i = 0; i < text.Split(Environment.NewLine.ToCharArray()).Length; i++)
