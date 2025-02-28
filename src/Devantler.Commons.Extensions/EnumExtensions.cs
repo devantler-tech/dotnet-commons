@@ -14,6 +14,7 @@ public static class EnumExtensions
   /// </summary>
   public static string GetDescriptionOrDefault(this Enum value)
   {
+    ArgumentNullException.ThrowIfNull(value, nameof(value));
     var field = value.GetType().GetField(value.ToString());
     var descriptionAttribute = field?.GetCustomAttribute<DescriptionAttribute>();
     return descriptionAttribute?.Description ?? value.ToString();
@@ -24,6 +25,7 @@ public static class EnumExtensions
   /// </summary>
   public static string GetEnumMemberValueOrDefault(this Enum value)
   {
+    ArgumentNullException.ThrowIfNull(value, nameof(value));
     var field = value.GetType().GetField(value.ToString());
     var enumMemberAttribute = field?.GetCustomAttribute<EnumMemberAttribute>();
     return enumMemberAttribute?.Value ?? value.ToString();

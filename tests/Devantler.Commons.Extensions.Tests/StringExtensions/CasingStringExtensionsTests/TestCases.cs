@@ -5,7 +5,7 @@ namespace Devantler.Commons.Extensions.Tests.StringExtensions.CasingStringExtens
 /// <summary>
 /// Test cases for <see cref="CasingStringExtensions"/>.
 /// </summary>
-public static class TestCases
+static class TestCases
 {
   /// <summary>
   /// Casing tests.

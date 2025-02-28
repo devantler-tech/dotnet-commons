@@ -16,10 +16,10 @@ public static class CasingStringExtensions
     if (RegexLibrary.PascalCaseWithDigitsRegex.IsMatch(text))
       return text;
     if (RegexLibrary.CamelCaseWithDigitsRegex.IsMatch(text))
-      return text[..1].ToUpper() + text[1..];
+      return text[..1].ToUpper(System.Globalization.CultureInfo.CurrentCulture) + text[1..];
 
     text = RegexLibrary.WordsRegex
-        .Replace(text, m => m.Value[..1].ToUpper() + m.Value[1..].ToLower());
+        .Replace(text, m => m.Value[..1].ToUpper(System.Globalization.CultureInfo.CurrentCulture) + m.Value[1..].ToLower(System.Globalization.CultureInfo.CurrentCulture));
 
     text = RegexLibrary.NonAlphanumericRegex.Replace(text, string.Empty);
 
@@ -39,7 +39,7 @@ public static class CasingStringExtensions
 
     text = text.ToPascalCase();
 
-    return text[..1].ToLower() + text[1..];
+    return text[..1].ToLower(System.Globalization.CultureInfo.CurrentCulture) + text[1..];
   }
 
   /// <summary>
@@ -55,7 +55,7 @@ public static class CasingStringExtensions
 
     return RegexLibrary.WordsRegex.Matches(text)
         .Select(m => m.Value)
-        .Aggregate(new StringBuilder(), (sb, s) => sb.Append(s.ToLower()).Append('-'))
+        .Aggregate(new StringBuilder(), (sb, s) => sb.Append(s.ToLower(System.Globalization.CultureInfo.CurrentCulture)).Append('-'))
         .ToString()[..^1];
   }
 }

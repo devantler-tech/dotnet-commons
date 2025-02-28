@@ -7,10 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{A9435505-997
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{72326D0F-9CD1-4424-A12B-D3B5DCC0649D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devantler.Commons.AutoFixture.DataAttributes", "src\Devantler.Commons.AutoFixture.DataAttributes\Devantler.Commons.AutoFixture.DataAttributes.csproj", "{F5EF2730-3866-4B7E-942B-081C8F205AAB}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devantler.Commons.AutoFixture.DataAttributes.Tests.Unit", "tests\Devantler.Commons.AutoFixture.DataAttributes.Tests.Unit\Devantler.Commons.AutoFixture.DataAttributes.Tests.Unit.csproj", "{DC29E51D-304F-441E-B96C-7EC91E4B7E70}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devantler.Commons.Extensions", "src\Devantler.Commons.Extensions\Devantler.Commons.Extensions.csproj", "{B7356069-7A34-4A9B-BAC8-F6E2C94F1D57}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Devantler.Commons.Extensions.Tests", "tests\Devantler.Commons.Extensions.Tests\Devantler.Commons.Extensions.Tests.csproj", "{5D51F1E3-614B-4994-BAD8-3DAFB2273251}"

@@ -14,12 +14,10 @@
 │   └── workflows
 ├── .vscode
 ├── src
-│   ├── Devantler.Commons.AutoFixture.DataAttributes
 │   ├── Devantler.Commons.Extensions
 │   │   └── StringExtensions
 │   └── Devantler.Commons.Utils
 └── tests
-    ├── Devantler.Commons.AutoFixture.DataAttributes.Tests.Unit
     ├── Devantler.Commons.Extensions.Tests
     │   ├── EnumExtensionsTests
     │   ├── ListExtensionsTests
@@ -48,9 +46,6 @@ To get started, you can install the packages from NuGet.
 ```bash
 # Extensions for common classes and functionality for string, enum, list, etc.
 dotnet add package Devantler.Commons.Extensions
-
-# Automatic input for AutoFixture and xUnit
-dotnet add package Devantler.Commons.AutoFixture.DataAttributes
 
 # Utilities for various common purposes
 dotnet add package Devantler.Commons.Utils

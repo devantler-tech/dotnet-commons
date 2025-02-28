@@ -3,7 +3,7 @@ namespace Devantler.Commons.Extensions.Tests.EnumExtensionsTests;
 /// <summary>
 /// Tests for <see cref="EnumExtensions.GetEnumMemberValueOrDefault(Enum)"/>.
 /// </summary>
-public class GetEnumMemberValueOrDefault
+public class GetEnumMemberValueOrDefaultTests
 {
   /// <summary>
   /// Tests that the enum member value is returned when the enum has an enum member attribute.

@@ -5,7 +5,7 @@ namespace Devantler.Commons.Extensions.Tests.StringExtensions.GeneralStringExten
 /// <summary>
 /// Tests for <see cref="GeneralStringExtensions"/>.
 /// </summary>
-public class GeneralStringExtensionsTests
+public class NullIfEmptyTests
 {
   /// <summary>
   /// Test that <see cref="GeneralStringExtensions.NullIfEmpty"/> returns null for null and empty strings.

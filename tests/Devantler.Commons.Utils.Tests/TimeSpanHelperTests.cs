@@ -3,7 +3,7 @@
 /// <summary>
 /// Tests for <see cref="TimeSpanHelper"/>.
 /// </summary>
-public class TimeSpanHelperTest
+public class TimeSpanHelperTests
 {
   /// <summary>
   /// Test cases for <see cref="TimeSpanHelper.ParseDuration"/>.
