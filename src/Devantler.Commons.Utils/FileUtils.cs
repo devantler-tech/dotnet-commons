@@ -14,7 +14,7 @@ public static class FileHelper
   /// <param name="cancellationToken"></param>
   /// <returns></returns>
   /// <exception cref="TimeoutException"></exception>
-  public static async Task RetryFileAccessAsync(Func<Task> fileAccessAction, int timeoutInSeconds = 5, CancellationToken cancellationToken)
+  public static async Task RetryFileAccessAsync(Func<Task> fileAccessAction, int timeoutInSeconds = 5, CancellationToken cancellationToken = default)
   {
     ArgumentNullException.ThrowIfNull(fileAccessAction);
     using var timeoutCts = new CancellationTokenSource(TimeSpan.FromSeconds(timeoutInSeconds));
@@ -29,11 +29,12 @@ public static class FileHelper
       }
       catch (IOException)
       {
-        if (timeoutCts.Token.IsCancellationRequested)
-          throw new TimeoutException($"Failed to access the file within the timeout of {timeoutInSeconds} seconds.");
-
         // Wait and retry if the file is locked.
         await Task.Delay(100, linkedCts.Token).ConfigureAwait(false);
+      }
+      catch (Exception)
+      {
+        throw;
       }
     }
   }
