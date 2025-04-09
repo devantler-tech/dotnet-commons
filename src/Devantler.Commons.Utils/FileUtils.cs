@@ -32,10 +32,6 @@ public static class FileHelper
         // Wait and retry if the file is locked.
         await Task.Delay(100, linkedCts.Token).ConfigureAwait(false);
       }
-      catch (Exception)
-      {
-        throw;
-      }
     }
   }
 }
