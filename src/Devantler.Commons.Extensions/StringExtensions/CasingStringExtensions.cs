@@ -13,17 +13,17 @@ public static class CasingStringExtensions
   /// <param name="text"></param>
   public static string ToPascalCase(this string text)
   {
-    if (RegexLibrary.PascalCaseWithDigitsRegex.IsMatch(text))
+    if (RegexLibrary.PascalCaseWithDigitsRegex().IsMatch(text))
       return text;
-    if (RegexLibrary.CamelCaseWithDigitsRegex.IsMatch(text))
+    if (RegexLibrary.CamelCaseWithDigitsRegex().IsMatch(text))
       return text[..1].ToUpper(System.Globalization.CultureInfo.CurrentCulture) + text[1..];
 
-    text = RegexLibrary.WordsRegex
+    text = RegexLibrary.WordsRegex()
         .Replace(text, m => m.Value[..1].ToUpper(System.Globalization.CultureInfo.CurrentCulture) + m.Value[1..].ToLower(System.Globalization.CultureInfo.CurrentCulture));
 
-    text = RegexLibrary.NonAlphanumericRegex.Replace(text, string.Empty);
+    text = RegexLibrary.NonAlphanumericRegex().Replace(text, string.Empty);
 
-    text = RegexLibrary.WhitespaceRegex.Replace(text, string.Empty);
+    text = RegexLibrary.WhitespaceRegex().Replace(text, string.Empty);
 
     return text;
   }
@@ -34,7 +34,7 @@ public static class CasingStringExtensions
   /// <param name="text"></param>
   public static string ToCamelCase(this string text)
   {
-    if (RegexLibrary.CamelCaseWithDigitsRegex.IsMatch(text))
+    if (RegexLibrary.CamelCaseWithDigitsRegex().IsMatch(text))
       return text;
 
     text = text.ToPascalCase();
@@ -48,12 +48,12 @@ public static class CasingStringExtensions
   /// <param name="text"></param>
   public static string ToKebabCase(this string text)
   {
-    if (RegexLibrary.KebabCaseRegex.IsMatch(text))
+    if (RegexLibrary.KebabCaseRegex().IsMatch(text))
       return text;
 
     text = text.ToPascalCase();
 
-    return RegexLibrary.WordsRegex.Matches(text)
+    return RegexLibrary.WordsRegex().Matches(text)
         .Select(m => m.Value)
         .Aggregate(new StringBuilder(), (sb, s) => sb.Append(s.ToLower(System.Globalization.CultureInfo.CurrentCulture)).Append('-'))
         .ToString()[..^1];

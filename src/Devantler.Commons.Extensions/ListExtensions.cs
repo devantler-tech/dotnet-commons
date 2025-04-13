@@ -1,6 +1,6 @@
-namespace Devantler.Commons.Extensions;
 using System.Globalization;
 
+namespace Devantler.Commons.Extensions;
 /// <summary>
 /// Extensions for List.
 /// </summary>

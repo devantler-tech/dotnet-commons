@@ -32,9 +32,9 @@ public class FileHelperTests
     var fileAccessAction = new Func<Task>(() =>
     {
       attempt++;
-      if (attempt < 3)
-        throw new IOException("File is locked.");
-      return Task.CompletedTask;
+      return attempt < 3 ?
+        throw new IOException("File is locked.") :
+        Task.CompletedTask;
     });
 
     // Act
@@ -89,7 +89,7 @@ public class FileHelperTests
   public async Task RetryFileAccessAsync_NullFileAccessAction_ThrowsArgumentNullException()
   {
     // Act & Assert
-    await Assert.ThrowsAsync<ArgumentNullException>(() =>
+    _ = await Assert.ThrowsAsync<ArgumentNullException>(() =>
       FileHelper.RetryFileAccessAsync(null!));
   }
 }

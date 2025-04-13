@@ -21,6 +21,6 @@ public class ToKebabCaseTests
     string actual = text.ToKebabCase();
 
     //Assert
-    Assert.Matches(RegexLibrary.KebabCaseRegex, actual);
+    Assert.Matches(RegexLibrary.KebabCaseRegex(), actual);
   }
 }

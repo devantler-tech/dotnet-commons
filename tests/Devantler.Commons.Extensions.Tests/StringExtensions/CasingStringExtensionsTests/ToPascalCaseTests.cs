@@ -12,8 +12,7 @@ public class ToPascalCaseTests
   /// Tests that the method returns a string in Pascal case.
   /// </summary>
   /// <param name="text"></param>
-  [Theory]
-  [AutoData]
+  [Theory, AutoData]
   [MemberData(nameof(TestCases.CasingTests), MemberType = typeof(TestCases))]
   public void ReturnsToPascalCase(string text)
   {
@@ -21,6 +20,6 @@ public class ToPascalCaseTests
     string actual = text.ToPascalCase();
 
     //Assert
-    Assert.Matches(RegexLibrary.PascalCaseWithDigitsRegex, actual);
+    Assert.Matches(RegexLibrary.PascalCaseWithDigitsRegex(), actual);
   }
 }

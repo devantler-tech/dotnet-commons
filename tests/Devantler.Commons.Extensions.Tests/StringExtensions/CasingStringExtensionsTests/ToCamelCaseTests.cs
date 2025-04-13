@@ -20,6 +20,6 @@ public class ToCamelCaseTests
     string actual = text.ToCamelCase();
 
     //Assert
-    Assert.Matches(RegexLibrary.CamelCaseWithDigitsRegex, actual);
+    Assert.Matches(RegexLibrary.CamelCaseWithDigitsRegex(), actual);
   }
 }
