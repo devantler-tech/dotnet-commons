@@ -14,11 +14,11 @@
 │   └── workflows
 ├── .vscode
 ├── src
-│   ├── Devantler.Commons.Extensions
+│   ├── DevantlerTech.Commons.Extensions
 │   │   └── StringExtensions
-│   └── Devantler.Commons.Utils
+│   └── DevantlerTech.Commons.Utils
 └── tests
-    ├── Devantler.Commons.Extensions.Tests
+    ├── DevantlerTech.Commons.Extensions.Tests
     │   ├── EnumExtensionsTests
     │   ├── ListExtensionsTests
     │   ├── Setup
@@ -29,7 +29,7 @@
     │       ├── FormattingStringExtensionsTests
     │       ├── GeneralStringExtensionsTests
     │       └── GrammarStringExtensionsTests
-    └── Devantler.Commons.Utils.Tests
+    └── DevantlerTech.Commons.Utils.Tests
 
 21 directories
 ```
@@ -45,8 +45,8 @@ To get started, you can install the packages from NuGet.
 
 ```bash
 # Extensions for common classes and functionality for string, enum, list, etc.
-dotnet add package Devantler.Commons.Extensions
+dotnet add package DevantlerTech.Commons.Extensions
 
 # Utilities for various common purposes
-dotnet add package Devantler.Commons.Utils
+dotnet add package DevantlerTech.Commons.Utils
 ```
