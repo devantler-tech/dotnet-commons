@@ -1,0 +1,13 @@
+<Solution>
+  <Configurations>
+    <Platform Name="Any CPU" />
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Folder Name="/src/" />
+  <Folder Name="/tests/" />
+  <Project Path="src/DevantlerTech.Commons.Extensions/DevantlerTech.Commons.Extensions.csproj" />
+  <Project Path="src/DevantlerTech.Commons.Utils/DevantlerTech.Commons.Utils.csproj" />
+  <Project Path="tests/DevantlerTech.Commons.Extensions.Tests/DevantlerTech.Commons.Extensions.Tests.csproj" />
+  <Project Path="tests/DevantlerTech.Commons.Utils.Tests/DevantlerTech.Commons.Utils.Tests.csproj" />
+</Solution>

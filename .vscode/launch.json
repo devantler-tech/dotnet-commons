@@ -10,9 +10,9 @@
             "request": "launch",
             "preLaunchTask": "build",
             // If you have changed target frameworks, make sure to update the program path.
-            "program": "${workspaceFolder}/tests/Devantler.Commons.StringHelpers.Tests.Unit/bin/Debug/net8.0/Devantler.Commons.StringHelpers.Tests.Unit.dll",
+            "program": "${workspaceFolder}/tests/DevantlerTech.Commons.StringHelpers.Tests.Unit/bin/Debug/net8.0/DevantlerTech.Commons.StringHelpers.Tests.Unit.dll",
             "args": [ ],
-            "cwd": "${workspaceFolder}/tests/Devantler.Commons.StringHelpers.Tests.Unit",
+            "cwd": "${workspaceFolder}/tests/DevantlerTech.Commons.StringHelpers.Tests.Unit",
             // For more information about the 'console' field, see https://aka.ms/VSCode-CS-LaunchJson-Console
             "console": "internalConsole",
             "stopAtEntry": false
